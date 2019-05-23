@@ -305,6 +305,7 @@ nav {
 	display: flex;
 	justify-content: space-between;
 	flex-direction: row;
+	flex-wrap: wrap;
 	margin: 0 auto;
 	padding: 4rem 0;
 	width: 80%;
@@ -316,7 +317,20 @@ nav {
 	font-weight: 300;
 	font-size: 2.25rem;
 	line-height: 3rem;
-	color: rgb(115, 111, 223);
+	color: rgb(132, 129, 226);
+}
+
+.buttons {
+	flex: 0 1 auto;
+	position: relative;
+	top: -1.75rem;
+	align-items: center;
+}
+
+.contact {
+	background-color: #fff;
+	color: rgb(140, 140, 140);
+	margin-left: 1rem;
 }
 
 .account-content > h2 span {
@@ -328,7 +342,7 @@ nav {
 /***** START: Footer *****/
 footer {
 	position: relative;
-	height: 250px;
+	height: 350px;
 	background-color: rgb(115, 111, 223);
 }
 
