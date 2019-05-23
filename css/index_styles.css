@@ -10,10 +10,15 @@ html {
 
 body {
 	font-family: 'Open Sans', sans-serif;
-	color: rgb(170, 170, 170);
+	color: rgb(115, 115, 130);
 	font-size: 1.6rem;
 	font-weight: 400;
 	line-height: 1.85;
+}
+
+section {
+	padding: 1rem;
+	text-align: center;
 }
 
 /***** START: Hero Banner *****/
@@ -52,7 +57,7 @@ nav {
 	margin-right: 3.75em;
 }
 
-.nav-list li a.nav-support {
+.nav-support {
 	padding: .8rem 2.7rem;
 	color: #eee;
 	font-size: 1.35rem;
@@ -63,7 +68,11 @@ nav {
 	border-radius: 4px;
 }
 
-.nav-list li a.nav-support:hover {
+.nav-list li a:hover {
+	color: #fff;
+}
+
+.nav-support:hover {
 	background-color: rgb(139, 221, 152);
 }
 /**/
@@ -183,7 +192,6 @@ nav {
 	animation-duration: 2s;
 	animation-timing-function: cubic-bezier();
 	animation-iteration-count: infinite;
-
 }
 
 .arrow:hover {
@@ -197,3 +205,140 @@ nav {
 	100% {transform: translateY(14px);}
 }
 /***** END: Hero Banner *****/
+
+/***** START: How Section *****/
+.how-content {
+	width: 64%;
+	margin: 0 auto;
+	padding: 40px;
+}
+
+.how p {
+	font-size: 2rem;
+	line-height: 3rem;
+}
+
+.account-btn {
+	display: inline-block;
+	padding: .5rem 2.7rem;
+	margin-top: 34px;
+	color: #fff;
+	font-size: 1.35rem;
+	font-weight: 600;
+	text-transform: uppercase;
+	text-decoration: none;
+	box-shadow: rgba(0, 0, 0, .15) 1px 1px 10px;
+	background-color: rgb(115, 111, 223);
+	border: none;
+	border-radius: 8px;
+}
+/***** END: How Section *****/
+
+/***** START: Services Section *****/
+.services-content {
+	margin: 0 auto;
+}
+
+.services-content h2 {
+	font-size: 2.15rem;
+	font-weight: 300;
+	letter-spacing: .05rem;
+}
+
+.services-content h2::after {
+	content: "";
+	margin: 0 auto;
+  display: block;
+  width: 5%;
+  padding: 4px;
+	margin-bottom: 24px;
+  border-bottom: 3px solid;
+}
+
+.areas {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+.areas > div {
+	display: flex;
+	flex-wrap: wrap;
+	flex: 0 1 500px;
+	border: 2px solid #eee;
+	border-radius: 8px;
+	background-color: rgb(252, 252, 252);
+	padding: 30px 0px;
+	margin: 10px;
+}
+
+.info {
+	flex: 1;
+	text-align: left;
+	padding-right: 30px;
+}
+
+.info h3 {
+	color: #333;
+	font-size: 1.6rem;
+	text-transform: uppercase;
+}
+
+.info p {
+	color: #999;
+	font-size: 1.4rem;
+}
+
+.areas img {
+	flex: 0 0 90px;
+	height: 113px;
+}
+
+/***** END: Services Section *****/
+
+/***** START: Create Account Section *****/
+.account {
+	/* background-color: #eee; */
+}
+
+.account-content {
+	display: flex;
+	justify-content: space-between;
+	flex-direction: row;
+	margin: 0 auto;
+	padding: 4rem 0;
+	width: 80%;
+}
+
+.account-content > h2 {
+	flex: 0 1 auto;
+	text-align: left;
+	font-weight: 300;
+	font-size: 2.25rem;
+	line-height: 3rem;
+	color: rgb(115, 111, 223);
+}
+
+.account-content > h2 span {
+	font-weight: 400;
+	color: rgb(91, 60, 150);
+}
+/***** END: Create Account Section *****/
+
+/***** START: Footer *****/
+footer {
+	position: relative;
+	height: 250px;
+	background-color: rgb(115, 111, 223);
+}
+
+.gray-bkg {
+	position: absolute;
+	bottom: 0;
+	height: 100vh;
+	width: 100vw;
+	clip-path: polygon(0 30%, 100% 0, 100% 100%, 0 100%);
+	background-color: rgb(246, 249, 252);
+	z-index: -1;
+}
+/***** END: Footer *****/
