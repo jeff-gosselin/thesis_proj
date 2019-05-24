@@ -69,6 +69,18 @@ nav {
 	border-radius: 4px;
 }
 
+label {
+	display: none;
+	color: #eee;
+	font-size: 3.25rem;
+	font-weight: 400;
+	line-height: 2.25rem;
+}
+
+#toggle {
+	display: none;
+}
+
 .nav-list li a:hover {
 	color: #fff;
 }
@@ -118,6 +130,7 @@ nav {
 
 input::-webkit-input-placeholder{
     color: #bbb;
+		font-size: 1.7rem;
 }
 
 .submit {
@@ -133,9 +146,18 @@ input::-webkit-input-placeholder{
 }
 
 .submit:hover {
+	color: #fff;
 	text-shadow: rgba(0, 0, 0, .2) 1px 1px 10px;
 	background-color: rgb(139, 221, 152);
 	transition-duration: .25s;
+}
+
+.valid {
+	border: 4px solid green;
+}
+
+.invalid {
+	border: 4px solid red;
 }
 /**/
 
@@ -410,3 +432,63 @@ footer {
 	z-index: -1;
 }
 /***** END: Footer *****/
+
+@media (max-width: 720px) {
+
+	nav > ul {
+		display: none;
+	}
+
+	label {
+		display: block;
+	}
+
+	label:hover {
+		color: #fff;
+		font-size: 3.35rem;
+		cursor: pointer;
+		transition: .3s ease;
+	}
+	/* .hamburger {
+	  width: 30px;
+	}
+
+	.hamburger div,
+	.hamburger:before,
+	.hamburger:after {
+		display: block;
+		content: '';
+	  background-color: #eee;
+	  height: 4px;
+	  margin: 6px 0;
+		border-radius: 3px;
+	  transition: .3s ease;
+	}
+
+	.hamburger div:hover,
+	.hamburger:hover:before,
+	.hamburger:hover:after {
+		margin: 8px 0;
+		transition: .3s ease;
+	}
+
+	.hamburger:hover {
+		cursor: pointer;
+	} */
+}
+
+@media (max-width: 530px) {
+
+	.hero-content h1 {
+		font-size: 3.75rem;
+	}
+
+	.submit {
+		display: block;
+		margin: 30px auto;
+	}
+
+	.domain {
+		padding: 1.75rem 6rem 1.75rem 3rem;
+	}
+}
