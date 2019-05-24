@@ -69,8 +69,10 @@ nav {
 	border-radius: 4px;
 }
 
-.nav-list li a:hover {
+.active, .nav-list li a:hover {
 	color: #fff;
+	border-bottom: 2px solid #fff;
+	padding-bottom: .5rem;
 }
 
 .nav-support:hover {
@@ -81,7 +83,7 @@ nav {
 label {
 	display: none;
 	position: fixed;
-	top: 1.6rem;
+	top: 1.25rem;
 	right: 0%;
 	color: #eee;
 	font-size: 3.25rem;
@@ -146,6 +148,12 @@ label {
 	border: none;
 }
 
+.domain:focus {
+	outline: none;
+	box-shadow: rgba(253, 253, 255, .9) 0px 0px 10px 1px;
+	/* border: 2px solid #fff; */
+}
+
 input::-webkit-input-placeholder{
     color: #bbb;
 		font-size: 1.7rem;
@@ -160,6 +168,7 @@ input::-webkit-input-placeholder{
 	letter-spacing: .05rem;
 	border-radius: 8px;
 	border: none;
+	outline: none;
 	transition-duration: .25s;
 }
 
@@ -168,6 +177,11 @@ input::-webkit-input-placeholder{
 	text-shadow: rgba(0, 0, 0, .2) 1px 1px 10px;
 	background-color: rgb(139, 221, 152);
 	transition-duration: .25s;
+}
+
+.submit:active {
+	outline: none;
+	transform: scale(.95);
 }
 
 .valid {
@@ -183,7 +197,6 @@ input::-webkit-input-placeholder{
 .hero-wrapper {
 	position: relative;
 	height: 100vh;
-	/* min-height: 380px; */
 	background-size: cover;
 	background-color: rgb(115, 111, 223);
 	clip-path: polygon(0 0, 100% 0, 100% 70%, 0 100%);
@@ -276,6 +289,18 @@ input::-webkit-input-placeholder{
 	border: none;
 	border-radius: 8px;
 }
+
+.account-btn:hover {
+	background-color: rgba(72, 0, 163, .85);
+	cursor: pointer;
+	color: #fff;
+}
+
+.account-btn:active {
+	outline: none;
+	box-shadow: none;
+	transform: scale(.98);
+}
 /***** END: How Section *****/
 
 /***** START: Services Section *****/
@@ -338,13 +363,26 @@ input::-webkit-input-placeholder{
 	height: 113px;
 }
 
+.areas > div {
+	transition-duration: .25s;
+	transition-timing-function: ease;
+}
+
+.areas > div:hover {
+	cursor: pointer;
+	transform: scale(1.05);
+	transition-duration: .25s;
+	transition-timing-function: ease;
+}
+
+.areas > div:active {
+	outline: none;
+	border: 2px solid #aaa;
+}
+
 /***** END: Services Section *****/
 
 /***** START: Create Account Section *****/
-.account {
-	/* background-color: #eee; */
-}
-
 .account-content {
 	display: flex;
 	justify-content: space-between;
@@ -392,6 +430,7 @@ footer {
 
 .footer-content {
 	display: flex;
+	flex-wrap: wrap;
 	justify-content: space-evenly;
 	padding: 8rem;
 }
@@ -457,11 +496,13 @@ footer {
 
 	label {
 		display: block;
+		transition: .15s ease;
 	}
 
 	label:hover {
 		color: #fff;
 		cursor: pointer;
+		transform: scale(1.05);
 		transition: .3s ease;
 	}
 
@@ -508,32 +549,18 @@ footer {
 		border-radius: 0;
 	}
 
-	/* .hamburger {
-	  width: 30px;
+	.footer-content > ul {
+		flex: 1 1 33.33%;
+		margin: 2rem;
 	}
 
-	.hamburger div,
-	.hamburger:before,
-	.hamburger:after {
-		display: block;
-		content: '';
-	  background-color: #eee;
-	  height: 4px;
-	  margin: 6px 0;
-		border-radius: 3px;
-	  transition: .3s ease;
-	}
-
-	.hamburger div:hover,
-	.hamburger:hover:before,
-	.hamburger:hover:after {
-		margin: 8px 0;
-		transition: .3s ease;
-	}
-
-	.hamburger:hover {
-		cursor: pointer;
+	/* .social-icons {
+		flex: 2;
 	} */
+
+	.social-icons li {
+		display: inline-block;
+	}
 }
 
 @media (max-width: 530px) {
@@ -579,6 +606,7 @@ footer {
 	.domain {
 		padding: 1.75rem 1rem 1.75rem 1rem;
 		width: 80%;
+		min-width: 280px;
 	}
 
 	.arrow-down h3 {

@@ -6,28 +6,6 @@ links.forEach(link => {
 });
 //////////////////////////////////////////////////////////////////
 
-// Hamburger Menu
-
-const burger = document.querySelector('label');
-const toggle = document.querySelector('#toggle:checked + div.overlay');
-const nav = document.querySelector('.nav-list');
-const ol = document.querySelector('.overlay');
-
-burger.addEventListener('click', (e) => {
-	console.log(toggle);
-	// if (!toggle.checked) {
-	// 	ol.style.display = "block";
-	// 	nav.style.display = "block";
-	// } else if (window.innerWidth < 720){
-	// 	ol.style.display = "none";
-	// 	nav.style.display = "none";
-	// };
-})
-
-
-
-//////////////////////////////////////////////////////////////////
-
 // Arrow Button Scroll
 const arrow = document.querySelector('.arrow-down > a')
 
