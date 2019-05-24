@@ -36,10 +36,9 @@ section {
 /* Top Navigation */
 nav {
 	position: absolute;
-	top: 24px;
+	top: 2.4rem;
 	right: 8%;
-	z-index: 5;
-	font-weight: 600;
+	z-index: 100;
 }
 
 .nav-list li {
@@ -51,6 +50,7 @@ nav {
 	text-decoration: none;
 	color: #eee;
 	font-size: 1.35rem;
+	font-weight: 600;
 	margin-right: 1.75em;
 }
 
@@ -69,24 +69,42 @@ nav {
 	border-radius: 4px;
 }
 
-label {
-	display: none;
-	color: #eee;
-	font-size: 3.25rem;
-	font-weight: 400;
-	line-height: 2.25rem;
-}
-
-#toggle {
-	display: none;
-}
-
 .nav-list li a:hover {
 	color: #fff;
 }
 
 .nav-support:hover {
 	background-color: rgb(139, 221, 152);
+}
+
+/* Responsive Menu */
+label {
+	display: none;
+	position: fixed;
+	top: 1.6rem;
+	right: 0%;
+	color: #eee;
+	font-size: 3.25rem;
+	font-weight: 400;
+	line-height: 2.25rem;
+	text-shadow: rgba(0, 0, 0, .2) 1px 1px 10px;
+	padding: 1.5rem 5rem 1.5rem 2rem;
+	border-radius: 10rem 0 0 10rem;
+	background-color: rgba(116, 73, 215, .5);
+	z-index: 100;
+}
+
+#toggle {
+	display: none;
+}
+
+.overlay {
+	display: none;
+	position: fixed;
+	background-color: rgba(72, 0, 163, 0.85);
+	width: 100vw;
+	height: 100vh;
+	z-index: 50;
 }
 /**/
 
@@ -433,11 +451,9 @@ footer {
 }
 /***** END: Footer *****/
 
-@media (max-width: 720px) {
+/***** START: Media Queries *****/
 
-	nav > ul {
-		display: none;
-	}
+@media (max-width: 720px) {
 
 	label {
 		display: block;
@@ -445,10 +461,53 @@ footer {
 
 	label:hover {
 		color: #fff;
-		font-size: 3.35rem;
 		cursor: pointer;
 		transition: .3s ease;
 	}
+
+	#toggle:checked ~ div,
+	#toggle:checked ~ nav > ul {
+		display: block;
+	}
+
+
+
+	.nav-list {
+		position: fixed;
+		display: none;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		text-align: center;
+	}
+
+	.nav-list li {
+		display: block;
+		margin: 2.25rem;
+	}
+
+	.nav-list li a:hover {
+		border-bottom: 2px solid #fff;
+	}
+
+	.nav-list li a {
+		color: #ddd;
+		font-size: 2.75rem;
+		font-weight: 700;
+		margin: 0;
+		padding: 0 0 .5rem 0;
+	}
+
+	.nav-list li:nth-child(3) a {
+		margin-right: 0;
+	}
+
+	.nav-support, .nav-support:hover {
+		background-color: rgba(0, 0, 0, 0);
+		padding: 0 0 .5rem 0;
+		border-radius: 0;
+	}
+
 	/* .hamburger {
 	  width: 30px;
 	}
@@ -491,4 +550,49 @@ footer {
 	.domain {
 		padding: 1.75rem 6rem 1.75rem 3rem;
 	}
+
+	.how-content {
+		width: 80%;
+	}
+
+	.how-content p {
+		font-size: 1.35rem;
+	}
 }
+
+@media (max-width: 430px) {
+
+	.nav-list li a {
+		font-size: 2.25rem;
+	}
+
+	.hero-content h1 {
+		font-size: 3rem;
+		line-height: 4rem;
+	}
+
+	.submit {
+		display: block;
+		margin: 30px auto;
+	}
+
+	.domain {
+		padding: 1.75rem 1rem 1.75rem 1rem;
+		width: 80%;
+	}
+
+	.arrow-down h3 {
+		display: none;
+	}
+
+	.account-content h2 {
+		text-align: center;
+	}
+
+	footer {
+		display: none;
+	}
+}
+
+
+/***** END: Media Queries *****/
