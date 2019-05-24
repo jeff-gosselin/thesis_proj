@@ -6,6 +6,7 @@
 
 html {
 	font-size: 62.5%;
+	scroll-behavior: smooth;
 }
 
 body {
@@ -100,6 +101,7 @@ nav {
 	color: rgb(155, 232, 177);
 }
 
+/* Form */
 .hero-content form {
 	margin-top: 3.5rem;
 }
@@ -112,6 +114,10 @@ nav {
 	letter-spacing: .05rem;
 	border-radius: 8px;
 	border: none;
+}
+
+input::-webkit-input-placeholder{
+    color: #bbb;
 }
 
 .submit {
@@ -131,7 +137,6 @@ nav {
 	background-color: rgb(139, 221, 152);
 	transition-duration: .25s;
 }
-
 /**/
 
 /* Hero Banner Background */
@@ -173,7 +178,6 @@ nav {
 }
 
 .arrow-down h3 {
-	/* margin-top: 14rem; */
 	text-transform: uppercase;
 	color: #fff;
 	font-size: 1.4rem;
@@ -315,7 +319,7 @@ nav {
 	flex: 0 1 auto;
 	text-align: left;
 	font-weight: 300;
-	font-size: 2.25rem;
+	font-size: 2.15rem;
 	line-height: 3rem;
 	color: rgb(132, 129, 226);
 }
@@ -342,8 +346,58 @@ nav {
 /***** START: Footer *****/
 footer {
 	position: relative;
-	height: 350px;
+	color: #ddd;
 	background-color: rgb(115, 111, 223);
+}
+
+.footer-content {
+	display: flex;
+	justify-content: space-evenly;
+	padding: 8rem;
+}
+
+.footer-content ul {
+	flex: 0 1 auto;
+	list-style: none;
+	font-size: 1.35rem;
+	font-weight: 300;
+}
+
+.col > li {
+	padding-bottom: 1rem;
+}
+
+.col a {
+	text-decoration: none;
+	color: inherit;
+}
+
+.contact-info > li {
+	position: relative;
+}
+
+.contact-info > li:nth-child(2), .contact-info > li:nth-child(3) {
+	padding-top: 2.75rem;
+}
+
+.contact-icon img {
+	position: absolute;
+	left: -3.25rem;
+}
+
+.contact-address > li {
+	line-height: 2rem;
+}
+
+.medium {
+	font-size: 1.5rem;
+	font-weight: 400;
+}
+
+.bold {
+	font-size: 1.65rem;
+	font-weight: 700;
+	color: #efefef;
 }
 
 .gray-bkg {
