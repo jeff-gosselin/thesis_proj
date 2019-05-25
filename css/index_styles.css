@@ -524,8 +524,6 @@ footer {
 		display: block;
 	}
 
-
-
 	.nav-list {
 		position: fixed;
 		display: none;
@@ -566,10 +564,6 @@ footer {
 		flex: 1 1 33.33%;
 		margin: 2rem;
 	}
-
-	/* .social-icons {
-		flex: 2;
-	} */
 
 	.social-icons li {
 		display: inline-block;
@@ -635,6 +629,4 @@ footer {
 		display: none;
 	}
 }
-
-
 /***** END: Media Queries *****/
