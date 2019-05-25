@@ -69,14 +69,18 @@ nav {
 	border-radius: 4px;
 }
 
-.active, .nav-list li a:hover {
-	color: #fff;
-	border-bottom: 2px solid #fff;
+.active {
+	border-bottom: 2px solid #fff; */
 	padding-bottom: .5rem;
+}
+
+.nav-list li a:hover {
+	color: #fff;
 }
 
 .nav-support:hover {
 	background-color: rgb(139, 221, 152);
+	border-bottom: 0px;
 }
 
 /* Responsive Menu */
@@ -89,7 +93,6 @@ label {
 	font-size: 3.25rem;
 	font-weight: 400;
 	line-height: 2.25rem;
-	text-shadow: rgba(0, 0, 0, .2) 1px 1px 10px;
 	padding: 1.5rem 5rem 1.5rem 2rem;
 	border-radius: 10rem 0 0 10rem;
 	background-color: rgba(116, 73, 215, .5);
@@ -512,6 +515,10 @@ footer {
 		transition: .3s ease;
 	}
 
+	label:visited {
+		color: #eee;
+	}
+
 	#toggle:checked ~ div,
 	#toggle:checked ~ nav > ul {
 		display: block;
@@ -590,6 +597,10 @@ footer {
 
 	.how-content p {
 		font-size: 1.35rem;
+	}
+
+	.arrow-down {
+		display: none;
 	}
 }
 
